@@ -4,8 +4,12 @@ require_relative 'piece'
 class NullPiece < Piece
   include Singleton
 
-  def to_s(color = :white)
-    "_".colorize(color)
+  def initialize
+    @color = :white 
+  end 
+  
+  def symbol  
+    " "
   end
 
   def nil?
